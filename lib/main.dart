@@ -15,18 +15,25 @@ class NewsApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: const Text(
-            'NewsApp',
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
+          leading: const Icon(Icons.menu, color: Color(0XFF775242)),
+          title: Row(
+            children: [
+              const Icon(Icons.newspaper, color: Color(0XFF775242)),
+              ,
+              const Text(
+                'NewsApp',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           actions: const [
             Icon(
               Icons.notifications,
-              color: Color(0xFFfc9701),
+              color: Color(0XFFfc9701),
             )
           ],
         ),
