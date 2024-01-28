@@ -15,25 +15,44 @@ class NewsApp extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: const Icon(Icons.menu, color: Color(0XFF775242)),
-          title: Row(
+          leading: const Icon(
+            Icons.menu,
+            color: Color(0XFF775242),
+            size: 25,
+          ),
+          title: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.newspaper, color: Color(0XFF775242)),
-              ,
-              const Text(
+              Icon(
+                Icons.newspaper,
+                color: Color(0XFF775242),
+                size: 25,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
                 'NewsApp',
                 style: TextStyle(
                   fontSize: 30,
-                  color: Colors.black,
+                  color: Color(0XFF775242),
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ],
           ),
           actions: const [
-            Icon(
-              Icons.notifications,
-              color: Color(0XFFfc9701),
+            Row(
+              children: [
+                Icon(
+                  Icons.notifications,
+                  color: Color(0XFF775242),
+                  size: 25,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+              ],
             )
           ],
         ),
@@ -84,11 +103,12 @@ class NewsApp extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          alignment: Alignment.center,
+                          alignment: Alignment.bottomCenter,
+                          height: 180,
                           child: const Text(
-                            'This is a coffee',
+                            'This is a coffee\nwith a laptop',
                             style: TextStyle(
-                              fontSize: 35,
+                              fontSize: 30,
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
@@ -116,12 +136,16 @@ class NewsApp extends StatelessWidget {
                             width: 370,
                           ),
                         ),
-                        const Text(
-                          'This is a camera',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                        Container(
+                          alignment: Alignment.bottomCenter,
+                          height: 180,
+                          child: const Text(
+                            'This is a coffee\nwith a laptop',
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ],
@@ -150,10 +174,151 @@ class NewsApp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Container(),
+              Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.black,
+                  ),
+                  height: 150,
+                  width: 375,
+                  child: const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image(
+                        image: AssetImage(
+                          'assets/images/zenit_retro_camera_photos_map_107245_1680x1050.jpg',
+                        ),
+                        height: 300,
+                        width: 170,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Old Camera\nand Printed Photos',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.black,
+                  ),
+                  height: 150,
+                  width: 375,
+                  child: const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image(
+                        image: AssetImage(
+                          'assets/images/zenit_retro_camera_photos_map_107245_1680x1050.jpg',
+                        ),
+                        height: 300,
+                        width: 170,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Old Camera\nand Printed Photos',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.black,
+                  ),
+                  height: 150,
+                  width: 375,
+                  child: const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image(
+                        image: AssetImage(
+                          'assets/images/zenit_retro_camera_photos_map_107245_1680x1050.jpg',
+                        ),
+                        height: 300,
+                        width: 170,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Old Camera\nand Printed Photos',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
+        // floatingActionButton: const Row(
+        //   children: [
+        //     float
+        //   ],
+        // ),
+        floatingActionButton: FloatingActionButton.extended(
+            backgroundColor: Colors.black,
+            onPressed: () {},
+            label: const Text(''),
+            icon: const Row(
+              children: [
+                Icon(
+                  Icons.home,
+                  size: 30,
+                ),
+                SizedBox(
+                  width: 120,
+                ),
+                Icon(
+                  Icons.play_arrow,
+                  size: 30,
+                ),
+                SizedBox(
+                  width: 120,
+                ),
+                Icon(
+                  Icons.save,
+                  size: 30,
+                ),
+              ],
+            )),
       ),
     );
   }
